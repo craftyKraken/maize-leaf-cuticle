@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <title>GoreLab RasPi Sensor Diagnostic Page</title>
+  <meta name="description" content="Monitor the status of the probe logger for {{ probeName }}" />
+  <style type="text/css">
+      #rhPlot {
+        width : 600px;
+        height: 384px;
+        margin: 8px auto;
+      }
+      #tempPlot {
+        width : 600px;
+        height: 384px;
+        margin: 8px auto;
+      }
+    </style>
+</head>
+
+<body>
+	<h1>GoreLab Raspberry Pi Sensor Diagnostic Page</h1>
+	<h2>
+		<div>Sensor : {{ probeName }}</div>
+		<div style="clear: both;">
+			<div style="float: left;">Status</div>
+			<div style="float: left;">&nbsp:&nbsp</div>
+			<div id="status" style="float: left;">?</div>
+		</div>
+		<div style="clear: both;">
+			<div id="timeCode" style="float: left;">?</div>
+			<div style="float: left;">&nbsp:&nbsp</div>
+			<div id="time" style="float: left;">?</div>
+			<div style="float: left;">&nbsp</div>
+			<div style="float: left;">seconds</div>
+		</div>	
+			
+
+	</h2>
+
+	<div id="rhPlot"></div>
+	<div id="tempPlot"></div>
+	
+    <script type="text/javascript" src="flotr2.min.js"></script>
+    <script type="text/javascript" src="plotData.js"></script>
+    <script type="text/javascript" src="getStatusData.js"></script>
+    <script type="text/javascript" src="getGraphData.js"></script>
+	
+</body>
+</html>
